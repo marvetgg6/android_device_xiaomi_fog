@@ -54,9 +54,16 @@ TARGET_COMMON_QTI_COMPONENTS += \
 TARGET_NFC_SKU :=  c3qn
 
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2-service \
+    com.android.nfc_extras \
     libchrome.vendor \
-    SecureElement
+    NfcNci \
+    SecureElement \
+    Tag \
+    nxp.nxpnfc@1.0.vendor \
+    android.hardware.nfc@1.2-service \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.secure_element@1.2-service \
+    android.hardware.secure_element@1.2.vendor
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.nfc.port=I2C \
@@ -77,7 +84,10 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi \
+    hardware/nxp \
+    kernel/xiaomi/fog
 
 # VNDK
 PRODUCT_COPY_FILES += \
