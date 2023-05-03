@@ -52,6 +52,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     nfc
 
 TARGET_NFC_SKU :=  c3qn
+TARGET_USES_PN5XX_HAL := true
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
